@@ -41,9 +41,9 @@ func _process(dt):
 func increment():
 	var offset = 0
 	var tween = get_tree().create_tween()
-	if Global.TimeLeft > 9 and current_val.to_int() < 10:
-		offset = .15
-		tween.tween_property($Count/First, "offset_transform_position", Vector2(0, -16.475), .15)
+	if second_place == "9":
+		offset = .10
+		tween.tween_property($Count/First, "offset_transform_position", Vector2(0, -16.475), .10)
 	tween.tween_property($Count/Second, "offset_transform_position", Vector2(0, -16.475), .15)
 	
 	await get_tree().create_timer(.16 + offset).timeout
@@ -52,9 +52,9 @@ func increment():
 func decrement():
 	var offset = 0
 	var tween = get_tree().create_tween()
-	if Global.TimeLeft < 10 and current_val.to_int() > 9:
-		offset = .15
-		tween.tween_property($Count/First, "offset_transform_position", Vector2(0, 14.250), .15)
+	if second_place == "0":
+		offset = .10
+		tween.tween_property($Count/First, "offset_transform_position", Vector2(0, 14.250), .10)
 	tween.tween_property($Count/Second, "offset_transform_position", Vector2(0, 14.250), .15)
 	
 	await get_tree().create_timer(.16 + offset).timeout
