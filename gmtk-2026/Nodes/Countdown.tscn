@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://f4vc26qgllr4"]
+
+[ext_resource type="Script" uid="uid://daoqsnka8p4bw" path="res://Scripts/Countdown.gd" id="1_1kjy4"]
+
+[node name="Countdown" type="Control" unique_id=1865024168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1kjy4")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=359953516]
+layout_mode = 0
+offset_top = 6.0
+offset_right = 40.0
+offset_bottom = 20.0
+
+[node name="First" type="RichTextLabel" parent="RichTextLabel" unique_id=1419999227]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 12.0
+offset_bottom = 17.0
+text = "1"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Second" type="RichTextLabel" parent="RichTextLabel" unique_id=1556923680]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -14.0
+offset_right = 20.0
+offset_bottom = 59.0
+text = "5"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Second3" type="RichTextLabel" parent="RichTextLabel/Second" unique_id=1725716778]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 12.0
+offset_bottom = 31.0
+text = "5"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Second2" type="RichTextLabel" parent="RichTextLabel/Second" unique_id=462048245]
+layout_mode = 0
+offset_top = -6.0
+offset_right = 12.0
+offset_bottom = 17.0
+text = "5"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1552556111]
