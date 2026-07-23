@@ -2,7 +2,7 @@ extends Node
 
 var ThePlayer = null
 var TheScene = null
-var TimeLeft = 15
+var TimeLeft = 22
 var PauseTime = true
 
 var level = 0
