@@ -20,7 +20,7 @@ size = Vector2(128, 129)
 [node name="Player" type="CharacterBody2D" unique_id=1289754895]
 script = ExtResource("1_bkgf5")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1207572790]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1207572790]
 sprite_frames = SubResource("SpriteFrames_e4b20")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=997174621]

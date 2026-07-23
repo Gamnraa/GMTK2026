@@ -5,6 +5,7 @@ var TheScene = null
 var TimeLeft = 22
 var PauseTime = true
 
+var score = 0
 var level = 0
 var is_ingame = false
 
