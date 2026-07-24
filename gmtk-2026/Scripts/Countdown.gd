@@ -45,6 +45,7 @@ func increment():
 	tween.tween_property($Count/Second, "offset_transform_position", Vector2(0, -16.475), .15)
 	
 	await get_tree().create_timer(.16 + offset).timeout
+	tweening = false
 	update_vals()
 	
 func decrement():

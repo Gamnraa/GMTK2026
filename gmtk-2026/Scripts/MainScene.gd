@@ -1,10 +1,17 @@
 extends Node2D
 
+func _process(dt):
+	if Global.is_ingame: Global.is_ingame = Global.TimeLeft > 0
+	await get_tree().create_timer(.2).timeout
+	
+	if Global.is_ingame: pass
+	else: pass
+	
 
 func _on_win_body_entered(body: Node2D) -> void:
-	print("entered ", body)
 	if body.name == "Player":
 		if Global.level < Global.levels.size():
+			Global.TimeLeft = Global.TimeLeft + 3
 			$Camera2D/Win.set_deferred("monitoring", false)
 			var tween = get_tree().create_tween()
 			$Player.process_mode = Node.PROCESS_MODE_DISABLED
