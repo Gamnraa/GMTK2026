@@ -6,7 +6,7 @@
 [ext_resource type="TileSet" uid="uid://djcmff7ajx6dq" path="res://DebugSet.tres" id="3_uxrcv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fegl"]
-size = Vector2(1690, 424)
+size = Vector2(2350, 642)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4b20"]
 size = Vector2(104, 198.5)
@@ -29,7 +29,7 @@ position = Vector2(600, 360)
 position = Vector2(-600, -360)
 
 [node name="Collision" type="CollisionShape2D" parent="Camera2D/Lose" unique_id=560531231]
-position = Vector2(589, 934)
+position = Vector2(645, 1043)
 shape = SubResource("RectangleShape2D_8fegl")
 
 [node name="Win" type="Area2D" parent="Camera2D" unique_id=2085273414]
