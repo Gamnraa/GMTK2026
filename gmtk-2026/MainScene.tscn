@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://f4vc26qgllr4" path="res://Nodes/Countdown.tscn" id="1_x4av3"]
 [ext_resource type="PackedScene" uid="uid://bnr5riupmg2w3" path="res://Nodes/Player.tscn" id="3_rpqi1"]
 [ext_resource type="TileSet" uid="uid://djcmff7ajx6dq" path="res://DebugSet.tres" id="3_uxrcv"]
+[ext_resource type="PackedScene" uid="uid://d27y8d3cwvi3r" path="res://Nodes/EndScreen.tscn" id="5_rf2cd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8fegl"]
 size = Vector2(2350, 642)
@@ -44,6 +45,9 @@ offset_left = -23.0
 offset_top = -303.0
 offset_right = -23.0
 offset_bottom = -303.0
+
+[node name="EndScreen" parent="." unique_id=1329737354 instance=ExtResource("5_rf2cd")]
+visible = false
 
 [connection signal="body_entered" from="Camera2D/Lose" to="." method="_on_lose_body_entered"]
 [connection signal="body_entered" from="Camera2D/Win" to="." method="_on_win_body_entered"]

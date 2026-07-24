@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d27y8d3cwvi3r"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0lhij"]
+font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_ydt5b"]
+font_size = 64
+
+[node name="EndScreen" type="Node2D" unique_id=1329737354]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=711233815]
+offset_right = 1206.0
+offset_bottom = 652.0
+color = Color(0, 0, 0, 1)
+
+[node name="Message" type="Label" parent="." unique_id=723219825]
+offset_left = 2.0
+offset_top = 39.0
+offset_right = 1202.0
+offset_bottom = 171.0
+text = "You win!"
+label_settings = SubResource("LabelSettings_0lhij")
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="." unique_id=2010582824]
+offset_top = 321.0
+offset_right = 1200.0
+offset_bottom = 388.0
+text = "Final Score: 0"
+label_settings = SubResource("LabelSettings_ydt5b")
+horizontal_alignment = 1
+
+[node name="Prompt" type="Label" parent="." unique_id=1810359678]
+offset_left = 2.0
+offset_top = 549.0
+offset_right = 1200.0
+offset_bottom = 637.0
+text = "Press Enter to play again"
+label_settings = SubResource("LabelSettings_ydt5b")
+horizontal_alignment = 1

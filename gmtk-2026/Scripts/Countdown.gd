@@ -62,4 +62,6 @@ func decrement():
 
 
 func _on_timer_timeout() -> void:
-	Global.TimeLeft -= 1
+	
+	if Global.is_ingame:
+		Global.TimeLeft = max(0, Global.TimeLeft - 1)

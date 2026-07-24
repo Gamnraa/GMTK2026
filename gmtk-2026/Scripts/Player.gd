@@ -18,6 +18,7 @@ func _ready():
 	start_pos = position
 	
 func _physics_process(delta: float):
+	if not Global.is_ingame: return
 	var grounded = is_on_floor()
 	var right = Input.is_action_pressed("right")
 	var left = Input.is_action_pressed("left")
