@@ -11,7 +11,7 @@ func _process(dt):
 func _on_win_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if Global.level < Global.levels.size():
-			Global.TimeLeft = Global.TimeLeft + 3
+			Global.TimeLeft = Global.TimeLeft + 4
 			$Camera2D/Win.set_deferred("monitoring", false)
 			var tween = get_tree().create_tween()
 			$Player.process_mode = Node.PROCESS_MODE_DISABLED
@@ -23,8 +23,8 @@ func _on_win_body_entered(body: Node2D) -> void:
 			$Player.position = Vector2($Player.start_pos.x, $Player.position.y)
 			$Camera2D.position = Vector2(600, 360)
 			tween = get_tree().create_tween()
-			tween.tween_property($Level.get_child(0), "position", Vector2(0, 0), .07)
-			await get_tree().create_timer(.08).timeout
+			tween.tween_property($Level.get_child(0), "position", Vector2(0, 0), .16)
+			await get_tree().create_timer(.15).timeout
 			$Player.process_mode = Node.PROCESS_MODE_PAUSABLE
 			await get_tree().create_timer(.08).timeout
 			$Camera2D/Win.set_deferred("monitoring", true)
