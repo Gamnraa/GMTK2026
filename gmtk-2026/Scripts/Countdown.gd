@@ -10,7 +10,6 @@ func update_vals():
 	if Global.TimeLeft > 9:
 		first_place = current_val[0]
 		second_place = current_val[1]
-		#second_place = str(clamp(current_val[1].to_int() + 1, 0, 9))
 	else:
 		first_place = "0"
 		second_place = current_val[0]
@@ -25,7 +24,6 @@ func update_vals():
 	$Count/Second/Top.text = str(clamp(second_place.to_int() - 1, 0, 9))
 	$Count/Second.offset_transform_position = Vector2()
 	
-	print(second_place, " ", str(clamp(second_place.to_int() + 1, 0, 9)), " ", str(clamp(second_place.to_int() - 1, 0, 9)))
 
 func _ready():
 	update_vals()
@@ -64,4 +62,3 @@ func decrement():
 
 func _on_timer_timeout() -> void:
 	Global.TimeLeft -= 1
-	print(Global.TimeLeft, " ", current_val)
