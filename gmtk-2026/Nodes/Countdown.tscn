@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://vjwphcdmbbt4" path="res://Assets/DebugMenu.ttf" id="2_t5p56"]
 
 [node name="Countdown" type="Control" unique_id=1865024168]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

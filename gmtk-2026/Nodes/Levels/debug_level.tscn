@@ -36,4 +36,5 @@ speed = 16
 position = Vector2(873, 184)
 
 [node name="Fire" parent="." unique_id=1157977018 instance=ExtResource("4_xe81x")]
+texture_filter = 1
 position = Vector2(341, 347)
