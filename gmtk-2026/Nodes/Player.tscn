@@ -1,29 +1,100 @@
 [gd_scene format=3 uid="uid://bnr5riupmg2w3"]
 
 [ext_resource type="Script" uid="uid://dj1ugevvulse6" path="res://Scripts/Player.gd" id="1_bkgf5"]
-[ext_resource type="Texture2D" uid="uid://dhcwybhoxgwhe" path="res://icon.svg" id="1_owxo4"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_e4b20"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_owxo4")
-}],
-"loop": 1,
-"name": &"default",
-"speed": 5.0
-}]
+[ext_resource type="Texture2D" uid="uid://drba7g2g1p45w" path="res://Assets/spritesheet-player.png" id="2_bkgf5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4b20"]
-size = Vector2(128, 129)
+size = Vector2(36, 52)
+
+[sub_resource type="Animation" id="Animation_kl0bm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_pdiyv"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_bkgf5"]
+resource_name = "player-jump"
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_8oq4d"]
+resource_name = "walk"
+length = 0.4
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hrew7"]
+_data = {
+&"RESET": SubResource("Animation_kl0bm"),
+&"player-idle": SubResource("Animation_pdiyv"),
+&"player-jump": SubResource("Animation_bkgf5"),
+&"player-walk": SubResource("Animation_8oq4d")
+}
 
 [node name="Player" type="CharacterBody2D" unique_id=1289754895]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_bkgf5")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1207572790]
-sprite_frames = SubResource("SpriteFrames_e4b20")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=997174621]
-position = Vector2(0, -0.5)
+position = Vector2(2, 6)
 shape = SubResource("RectangleShape2D_e4b20")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1491886535]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_bkgf5")
+hframes = 8
+vframes = 8
+frame = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1808049132]
+libraries/ = SubResource("AnimationLibrary_hrew7")
