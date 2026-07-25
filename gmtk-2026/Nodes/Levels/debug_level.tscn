@@ -36,4 +36,4 @@ speed = 16
 position = Vector2(873, 184)
 
 [node name="Fire" parent="." unique_id=1157977018 instance=ExtResource("4_xe81x")]
-position = Vector2(298, 374)
+position = Vector2(341, 347)

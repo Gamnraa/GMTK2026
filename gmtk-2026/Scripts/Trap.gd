@@ -15,14 +15,28 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_cooldown_timeout() -> void:
+	$AnimatedSprite2D.show()
+	$AnimatedSprite2D.play("Starting")
+	$AnimatedSprite2D.scale = Vector2(0.8, 0.8)
+	var tween = get_tree().create_tween()
+	tween.tween_property($AnimatedSprite2D, "position", Vector2(0, -40), .15)
+	await get_tree().create_timer(.16).timeout
+	$AnimatedSprite2D.hide()
+	$AnimatedSprite2D.position = Vector2(0, 0)
 	await get_tree().create_timer(.5).timeout
+	$AnimatedSprite2D.show()
+	$AnimatedSprite2D.play("Active")
+	$AnimatedSprite2D.scale = Vector2(1.7, 2.0)
 	$Active.start()
 	$Area2D.monitoring = true
-	#play anim
+	
 
 
 func _on_active_timeout() -> void:
 	$Cooldown.start()
 	$Area2D.monitoring = false
-	#unplay anim
+	$AnimatedSprite2D.play("inactive")
+	$AnimatedSprite2D.hide()
+	$AnimatedSprite2D.position = Vector2(0, 60)
+	
 	

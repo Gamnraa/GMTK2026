@@ -1,34 +1,84 @@
 [gd_scene format=3 uid="uid://dfe0e7ulw51dd"]
 
-[ext_resource type="Texture2D" uid="uid://dhcwybhoxgwhe" path="res://icon.svg" id="1_ht5y1"]
 [ext_resource type="Script" uid="uid://b2s0vkgpccmlt" path="res://Scripts/Firetrap.gd" id="1_j3nli"]
+[ext_resource type="Texture2D" uid="uid://bmxq1oerkampr" path="res://Assets/spritesheet-blocks.png" id="2_j3nli"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3nli"]
+atlas = ExtResource("2_j3nli")
+region = Rect2(192, 128, 32, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x705c"]
+atlas = ExtResource("2_j3nli")
+region = Rect2(224, 128, 32, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl2ge"]
+atlas = ExtResource("2_j3nli")
+region = Rect2(160, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqjni"]
+atlas = ExtResource("2_j3nli")
+region = Rect2(160, 224, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0lhij"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_ht5y1")
+"texture": SubResource("AtlasTexture_j3nli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x705c")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"Active",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"Inactive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dl2ge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqjni")
+}],
+"loop": 1,
+"name": &"Starting",
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe81x"]
+size = Vector2(54, 67)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lhij"]
-size = Vector2(54, 211)
+size = Vector2(54, 191.5)
 
 [node name="Fire" type="StaticBody2D" unique_id=658194644]
 script = ExtResource("1_j3nli")
-speed = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=528823858]
+position = Vector2(-5.684342e-14, 96.00001)
+scale = Vector2(1.6875, 2.0937498)
+texture = ExtResource("2_j3nli")
+hframes = 8
+vframes = 8
+frame = 62
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1580727552]
-scale = Vector2(0.421875, 1.6445314)
+scale = Vector2(1.7, 2)
 sprite_frames = SubResource("SpriteFrames_0lhij")
+animation = &"Active"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127695397]
+position = Vector2(0, 96)
+shape = SubResource("RectangleShape2D_xe81x")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=180537253]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=910220194]
-position = Vector2(0, 0.5)
+position = Vector2(0, -33.25)
 shape = SubResource("RectangleShape2D_0lhij")
 
 [node name="Cooldown" type="Timer" parent="." unique_id=819237815]
