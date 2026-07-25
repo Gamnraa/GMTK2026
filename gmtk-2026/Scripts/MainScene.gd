@@ -24,7 +24,7 @@ func _process(dt):
 func _on_win_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if Global.level < Global.levels.size():
-			Global.score += Global.TimeLeft * 10
+			Global.score += Global.TimeLeft * 15
 			Global.TimeLeft = Global.TimeLeft + 4
 			$Camera2D/Win.set_deferred("monitoring", false)
 			var tween = get_tree().create_tween()
@@ -42,6 +42,8 @@ func _on_win_body_entered(body: Node2D) -> void:
 			$Player.process_mode = Node.PROCESS_MODE_PAUSABLE
 			await get_tree().create_timer(.08).timeout
 			$Camera2D/Win.set_deferred("monitoring", true)
+		else:
+			Global.end_game(true)
 
 func _on_lose_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
