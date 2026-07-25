@@ -50,7 +50,7 @@ func _physics_process(delta: float):
 		if left: velocity.x -= 350
 		
 	if not grounded and Input.is_action_pressed("ground_pound"):
-		velocity.y = jump_force * 2
+		velocity.y = jump_force * 3.5
 	
 	if not (left or right) and grounded:
 		velocity.x = move_toward(velocity.x, 0, accel)
