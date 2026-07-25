@@ -9,7 +9,7 @@ radius = 36.124783
 [sub_resource type="CircleShape2D" id="CircleShape2D_ydt5b"]
 radius = 34.234486
 
-[node name="Node2D" type="StaticBody2D" unique_id=1021255079]
+[node name="Blade" type="StaticBody2D" unique_id=1021255079]
 script = ExtResource("1_4oi8s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1426067027]
