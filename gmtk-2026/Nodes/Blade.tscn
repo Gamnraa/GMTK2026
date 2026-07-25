@@ -40,7 +40,7 @@ position = Vector2(-5, -4)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_e4b20")
 animation = &"Spinten"
-frame_progress = 0.7902658
+frame_progress = 0.36122915
 speed_scale = 5.0
 
 [node name="Area2D" type="Area2D" parent="." unique_id=759731956]
