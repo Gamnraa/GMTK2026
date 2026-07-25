@@ -141,10 +141,6 @@ rotation = 1.5707964
 speed = 0.3
 path = NodePath("..")
 
-[node name="Fire" parent="." unique_id=658194644 instance=ExtResource("4_ccdtr")]
-position = Vector2(407, 103)
-rotation = 3.1415927
-
 [node name="Blade2" parent="." unique_id=1422782770 instance=ExtResource("2_uxxe1")]
 position = Vector2(342, 507)
 
