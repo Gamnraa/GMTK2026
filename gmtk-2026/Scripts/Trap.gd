@@ -10,7 +10,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if path: path.progress += speed
+	if path is PathFollow2D: path.progress += speed
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
