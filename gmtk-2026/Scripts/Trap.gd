@@ -3,18 +3,13 @@ extends StaticBody2D
 @export var path = PathFollow2D
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
-	#_on_cooldown_timeout()
-
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if path is PathFollow2D: path.progress += speed
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
 	if body.name == "Player":
 		Global.reset_player()
 

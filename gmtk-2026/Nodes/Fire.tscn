@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfe0e7ulw51dd"]
 
 [ext_resource type="Texture2D" uid="uid://dhcwybhoxgwhe" path="res://icon.svg" id="1_ht5y1"]
-[ext_resource type="Script" uid="uid://b1qhyags6n1cd" path="res://Scripts/Trap.gd" id="1_j3nli"]
+[ext_resource type="Script" uid="uid://b2s0vkgpccmlt" path="res://Scripts/Firetrap.gd" id="1_j3nli"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0lhij"]
 animations = [{
@@ -17,8 +17,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0lhij"]
 size = Vector2(54, 211)
 
-[node name="Fire" type="Node2D" unique_id=1157977018]
+[node name="Fire" type="StaticBody2D" unique_id=658194644]
 script = ExtResource("1_j3nli")
+speed = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1580727552]
 scale = Vector2(0.421875, 1.6445314)
@@ -38,5 +39,6 @@ one_shot = true
 wait_time = 3.0
 one_shot = true
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="timeout" from="Active" to="." method="_on_active_timeout"]
