@@ -11,6 +11,8 @@ var deaths = 0
 var is_ingame = false
 var is_gameover = false
 
+var dir = "res://Nodes/Levels/"
+
 
 var levels = [
 	"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15",
@@ -29,7 +31,7 @@ func _ready():
 	
 	#TheScene.appear()
 
-	var next_level = load("res://Nodes/Levels/10.tscn")
+	var next_level = load(dir + level + ".tscn")
 	
 	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
 	TheScene.get_node("Level").add_child(next_level.instantiate())
@@ -38,7 +40,7 @@ func level_transition():
 	#score is updated in MainScene since we've already increased the time by the time this gets called
 	level += 1
 	TheScene.get_node("Level").get_child(0).free()
-	var next_level = load("res://Nodes/Levels/debug_level2.tscn")
+	var next_level = load(dir + level + ".tscn")
 	TheScene.get_node("Level").add_child(next_level.instantiate())
 
 func reset_player():
@@ -56,7 +58,7 @@ func end_game(won):
 	is_gameover = true
 	
 func restart_game():
-	var next_level = load("res://Nodes/Levels/debug_level.tscn")
+	var next_level = load(dir + level + ".tscn")
 	
 	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
 	TheScene.get_node("Level").add_child(next_level.instantiate())
