@@ -29,7 +29,7 @@ func _ready():
 	
 	#TheScene.appear()
 
-	var next_level = load("res://Nodes/Levels/10.tscn")
+	var next_level = load("res://Nodes/Levels/01.tscn")
 	
 	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
 	TheScene.get_node("Level").add_child(next_level.instantiate())

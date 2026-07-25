@@ -103,7 +103,7 @@ tile_set = SubResource("TileSet_lgbpd")
 position = Vector2(579, 257)
 
 [node name="Fire2" parent="." unique_id=398966888 instance=ExtResource("2_bqbe3")]
-position = Vector2(192, 464.00003)
+position = Vector2(195, 464)
 rotation = -1.5707964
 
 [node name="Fire3" parent="." unique_id=742861630 instance=ExtResource("2_bqbe3")]
