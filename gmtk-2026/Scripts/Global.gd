@@ -6,7 +6,7 @@ var TimeLeft = 15
 var PauseTime = false
 
 var score = 0
-var level = 0
+var level = 10
 var deaths = 0
 var is_ingame = false
 var is_gameover = false
