@@ -10,7 +10,7 @@
 size = Vector2(2350, 642)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e4b20"]
-size = Vector2(104, 198.5)
+size = Vector2(104, 122.25)
 
 [node name="MainScene" type="Node2D" unique_id=2120504449]
 script = ExtResource("1_uxrcv")
@@ -37,7 +37,7 @@ shape = SubResource("RectangleShape2D_8fegl")
 position = Vector2(-600, -360)
 
 [node name="Collision" type="CollisionShape2D" parent="Camera2D/Win" unique_id=775355336]
-position = Vector2(1148, 549.25)
+position = Vector2(1148, 615.125)
 shape = SubResource("RectangleShape2D_e4b20")
 
 [node name="Countdown" parent="Camera2D" unique_id=1865024168 instance=ExtResource("1_x4av3")]
