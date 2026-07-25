@@ -24,7 +24,7 @@ tile_set = ExtResource("3_uxrcv")
 collision_visibility_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1376325275]
-position = Vector2(600, 360)
+position = Vector2(600, 320)
 
 [node name="Lose" type="Area2D" parent="Camera2D" unique_id=705309054]
 position = Vector2(-600, -360)
@@ -45,7 +45,7 @@ offset_left = -23.0
 offset_top = -303.0
 offset_right = -23.0
 offset_bottom = -303.0
-scale = Vector2(1.5, 1.5)
+scale = Vector2(3, 3)
 
 [node name="EndScreen" parent="." unique_id=1329737354 instance=ExtResource("5_rf2cd")]
 visible = false

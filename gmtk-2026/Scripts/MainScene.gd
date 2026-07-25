@@ -29,13 +29,13 @@ func _on_win_body_entered(body: Node2D) -> void:
 			$Camera2D/Win.set_deferred("monitoring", false)
 			var tween = get_tree().create_tween()
 			$Player.process_mode = Node.PROCESS_MODE_DISABLED
-			tween.tween_property($Camera2D, "position", Vector2(1600, 360), .33)
+			tween.tween_property($Camera2D, "position", Vector2(1600, 320), .33)
 			tween.tween_property($Level.get_child(0), "position", Vector2(0, 1000), .07)
 			await get_tree().create_timer(.41).timeout
 			Global.level_transition()
 			$Level.get_child(0).position = Vector2(0, 1000)
 			$Player.position = Vector2($Player.start_pos.x, $Player.position.y)
-			$Camera2D.position = Vector2(600, 360)
+			$Camera2D.position = Vector2(600, 320)
 			tween = get_tree().create_tween()
 			tween.tween_property($Level.get_child(0), "position", Vector2(0, 0), .16)
 			await get_tree().create_timer(.15).timeout
