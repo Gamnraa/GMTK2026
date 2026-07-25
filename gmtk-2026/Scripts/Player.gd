@@ -1,9 +1,9 @@
 extends CharacterBody2D
 var max_speed = 150
-var ground_speed = 580
+var ground_speed = 380
 var air_speed = 360
-var accel = 210
-var jump_force = 892.4
+var accel = 110
+var jump_force = 662.4
 
 var coyote_timer = 5
 var coyote_timer_max = 5

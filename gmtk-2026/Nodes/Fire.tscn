@@ -86,11 +86,11 @@ position = Vector2(0, -33.25)
 shape = SubResource("RectangleShape2D_0lhij")
 
 [node name="Cooldown" type="Timer" parent="." unique_id=819237815]
-wait_time = 2.0
+wait_time = 1.9
 one_shot = true
 
 [node name="Active" type="Timer" parent="." unique_id=611703665]
-wait_time = 3.0
+wait_time = 0.8
 one_shot = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
