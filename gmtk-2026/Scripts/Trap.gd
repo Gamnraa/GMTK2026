@@ -29,7 +29,7 @@ func _on_cooldown_timeout() -> void:
 	await get_tree().create_timer(.5).timeout
 	$AnimatedSprite2D.show()
 	$AnimatedSprite2D.play("Active")
-	$AnimatedSprite2D.scale = Vector2(1.7, 2.0)
+	$AnimatedSprite2D.scale = Vector2(1.7, 1.7)
 	$Active.start()
 	$Area2D.monitoring = true
 	

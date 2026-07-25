@@ -57,26 +57,29 @@ size = Vector2(54, 191.5)
 
 [node name="Fire" type="StaticBody2D" unique_id=658194644]
 texture_filter = 1
+scale = Vector2(0.6, 0.6)
 script = ExtResource("1_j3nli")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=528823858]
-position = Vector2(-5.684342e-14, 96.00001)
-scale = Vector2(1.6875, 2.0937498)
+position = Vector2(6.7762636e-21, 81.99999)
+scale = Vector2(1.7, 1.7)
 texture = ExtResource("2_j3nli")
 hframes = 8
 vframes = 8
 frame = 62
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1580727552]
-scale = Vector2(1.7, 2)
+scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_0lhij")
 animation = &"Active"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1127695397]
-position = Vector2(0, 96)
+visible = false
+position = Vector2(0, 76)
 shape = SubResource("RectangleShape2D_xe81x")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=180537253]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=910220194]
 position = Vector2(0, -33.25)
