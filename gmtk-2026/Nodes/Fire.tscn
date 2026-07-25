@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dfe0e7ulw51dd"]
+
+[ext_resource type="Texture2D" uid="uid://dhcwybhoxgwhe" path="res://icon.svg" id="1_ht5y1"]
+[ext_resource type="Script" uid="uid://b1qhyags6n1cd" path="res://Scripts/Trap.gd" id="1_j3nli"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0lhij"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ht5y1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lhij"]
+size = Vector2(54, 211)
+
+[node name="Fire" type="Node2D" unique_id=1157977018]
+script = ExtResource("1_j3nli")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1580727552]
+scale = Vector2(0.421875, 1.6445314)
+sprite_frames = SubResource("SpriteFrames_0lhij")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=180537253]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=910220194]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_0lhij")
+
+[node name="Cooldown" type="Timer" parent="." unique_id=819237815]
+wait_time = 2.0
+one_shot = true
+
+[node name="Active" type="Timer" parent="." unique_id=611703665]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="Active" to="." method="_on_active_timeout"]
