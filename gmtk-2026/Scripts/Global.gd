@@ -2,11 +2,11 @@ extends Node
 
 var ThePlayer = null
 var TheScene = null
-var TimeLeft = 15
+var TimeLeft = 60
 var PauseTime = false
 
 var score = 0
-var level = 11
+var level = 0
 var deaths = 0
 var is_ingame = false
 var is_gameover = false
