@@ -17,7 +17,7 @@ script = ExtResource("1_uxrcv")
 
 [node name="Player" parent="." unique_id=1289754895 instance=ExtResource("3_rpqi1")]
 process_mode = 1
-position = Vector2(107, 601)
+position = Vector2(110, 495)
 
 [node name="Level" type="TileMapLayer" parent="." unique_id=1095661904]
 tile_set = ExtResource("3_uxrcv")
