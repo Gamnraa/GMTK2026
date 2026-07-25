@@ -45,6 +45,7 @@ offset_left = -23.0
 offset_top = -303.0
 offset_right = -23.0
 offset_bottom = -303.0
+scale = Vector2(1.5, 1.5)
 
 [node name="EndScreen" parent="." unique_id=1329737354 instance=ExtResource("5_rf2cd")]
 visible = false
