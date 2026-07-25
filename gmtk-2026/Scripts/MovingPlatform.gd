@@ -1,5 +1,5 @@
 extends Node2D
-@export var speed = 20
+@export var speed = 20.0
 @export var path = PathFollow2D
 
 
