@@ -25,7 +25,7 @@ func _ready():
 	is_ingame = true
 	
 	#TheScene.appear()
-	var next_level = load("res://Nodes/Levels/debug_levelA.tscn")
+	var next_level = load("res://Nodes/Levels/debug_levelB.tscn")
 	
 	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
 	TheScene.get_node("Level").add_child(next_level.instantiate())
