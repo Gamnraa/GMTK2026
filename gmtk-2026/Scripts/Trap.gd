@@ -3,6 +3,7 @@ extends StaticBody2D
 @export var path = PathFollow2D
 
 
+
 func _ready():
 	$Sprite2D.play("Spinten")
 
@@ -12,7 +13,6 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body)
 	if body.name == "Player":
 		Global.reset_player()
 
