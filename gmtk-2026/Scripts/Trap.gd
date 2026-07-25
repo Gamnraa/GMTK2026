@@ -3,6 +3,9 @@ extends StaticBody2D
 @export var path = PathFollow2D
 
 
+func _ready():
+	$Sprite2D.play("Spinten")
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if path is PathFollow2D: path.progress += speed
