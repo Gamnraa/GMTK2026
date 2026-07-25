@@ -6,7 +6,7 @@ var TimeLeft = 15
 var PauseTime = false
 
 var score = 0
-var level = 10
+var level = 11
 var deaths = 0
 var is_ingame = false
 var is_gameover = false
@@ -31,7 +31,7 @@ func _ready():
 	
 	#TheScene.appear()
 
-	var next_level = load(dir + str(level) + ".tscn")
+	var next_level = load(dir + levels[level] + ".tscn")
 	
 	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
 	TheScene.get_node("Level").add_child(next_level.instantiate())
@@ -40,7 +40,7 @@ func level_transition():
 	#score is updated in MainScene since we've already increased the time by the time this gets called
 	level += 1
 	TheScene.get_node("Level").get_child(0).free()
-	var next_level = load(dir + str(level) + ".tscn")
+	var next_level = load(dir + levels[level] + ".tscn")
 	TheScene.get_node("Level").add_child(next_level.instantiate())
 
 func reset_player():
@@ -58,7 +58,7 @@ func end_game(won):
 	is_gameover = true
 	
 func restart_game():
-	var next_level = load(dir + str(level) + ".tscn")
+	var next_level = load(dir + levels[level] + ".tscn")
 	
 	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
 	TheScene.get_node("Level").add_child(next_level.instantiate())
