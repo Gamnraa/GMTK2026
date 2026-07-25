@@ -12,7 +12,10 @@ var is_ingame = false
 var is_gameover = false
 
 
-var levels = ["01.tscn", "02.tscn"]
+var levels = [
+	"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15",
+	"16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"
+]
 
 func _ready():
 	var root = get_tree().get_root()
@@ -25,7 +28,8 @@ func _ready():
 	is_ingame = true
 	
 	#TheScene.appear()
-	var next_level = load("res://Nodes/Levels/debug_levelB.tscn")
+
+	var next_level = load("res://Nodes/Levels/10.tscn")
 	
 	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
 	TheScene.get_node("Level").add_child(next_level.instantiate())
@@ -49,7 +53,6 @@ func end_game(won):
 	
 	TheScene.get_node("EndScreen").get_node("Score").text = "Final Score: " + str(score)
 	TheScene.get_node("EndScreen").visible = true
-	
 	is_gameover = true
 	
 func restart_game():

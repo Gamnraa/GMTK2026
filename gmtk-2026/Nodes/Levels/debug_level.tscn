@@ -2,6 +2,8 @@
 
 [ext_resource type="TileSet" uid="uid://djcmff7ajx6dq" path="res://DebugSet.tres" id="1_2n7e3"]
 [ext_resource type="PackedScene" uid="uid://c4j6vfb15l500" path="res://Nodes/MovingPlatform.tscn" id="2_5x51m"]
+[ext_resource type="PackedScene" uid="uid://dqeiohc7k0nmv" path="res://Nodes/Blade.tscn" id="3_36agm"]
+[ext_resource type="PackedScene" uid="uid://dfe0e7ulw51dd" path="res://Nodes/Fire.tscn" id="4_xe81x"]
 
 [sub_resource type="Curve2D" id="Curve2D_5x51m"]
 _data = {
@@ -25,3 +27,14 @@ rotates = false
 rotation = -1.5707964
 speed = 2
 path = NodePath("..")
+
+[node name="Node2D" parent="." unique_id=1021255079 instance=ExtResource("3_36agm")]
+position = Vector2(673, 193)
+speed = 16
+
+[node name="MovingPlatform" parent="." unique_id=1320957195 instance=ExtResource("2_5x51m")]
+position = Vector2(873, 184)
+
+[node name="Fire" parent="." unique_id=1157977018 instance=ExtResource("4_xe81x")]
+texture_filter = 1
+position = Vector2(341, 347)
