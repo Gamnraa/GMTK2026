@@ -5,9 +5,27 @@
 
 [sub_resource type="Curve2D" id="Curve2D_22m4x"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 208, -112, 0, 0, 0, 0, 208, 768)
+"points": PackedVector2Array(0, 0, 0, 0, 208, -112, 0, 0, 0, 0, 208, 768, 0, 0, 0, 0, 208, 960)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_bovux"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 400, -176, 0, 0, 0, 0, 400, 768, 0, 0, 0, 0, 400, 896)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_0xgsg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 592, -240, 0, 0, 0, 0, 592, 832)
 }
 point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ou2ti"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 784, -304, 0, 0, 0, 0, 784, 704, 0, 0, 0, 0, 784, 768)
+}
+point_count = 3
 
 [node name="Node2D" type="Node2D" unique_id=1125478849]
 
@@ -26,5 +44,44 @@ rotates = false
 
 [node name="MovingPlatform2" parent="Path2D/PathFollow2D" unique_id=1320957195 node_paths=PackedStringArray("path") instance=ExtResource("2_bovux")]
 rotation = -1.5707964
-speed = 0.5
+speed = 3.0
+path = NodePath("..")
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=1598683343]
+curve = SubResource("Curve2D_bovux")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2" unique_id=83188584]
+position = Vector2(400, -176)
+rotation = 1.5707964
+rotates = false
+
+[node name="MovingPlatform2" parent="Path2D2/PathFollow2D" unique_id=591019347 node_paths=PackedStringArray("path") instance=ExtResource("2_bovux")]
+rotation = -1.5707964
+speed = 3.0
+path = NodePath("..")
+
+[node name="Path2D3" type="Path2D" parent="." unique_id=1880734763]
+curve = SubResource("Curve2D_0xgsg")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3" unique_id=149459947]
+position = Vector2(592, -240)
+rotation = 1.5707964
+rotates = false
+
+[node name="MovingPlatform2" parent="Path2D3/PathFollow2D" unique_id=675821321 node_paths=PackedStringArray("path") instance=ExtResource("2_bovux")]
+rotation = -1.5707964
+speed = 3.0
+path = NodePath("..")
+
+[node name="Path2D4" type="Path2D" parent="." unique_id=243433878]
+curve = SubResource("Curve2D_ou2ti")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D4" unique_id=1471913021]
+position = Vector2(784, -304)
+rotation = 1.5707964
+rotates = false
+
+[node name="MovingPlatform2" parent="Path2D4/PathFollow2D" unique_id=1364659341 node_paths=PackedStringArray("path") instance=ExtResource("2_bovux")]
+rotation = -1.5707964
+speed = 3.0
 path = NodePath("..")
