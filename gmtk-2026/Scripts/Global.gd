@@ -6,7 +6,7 @@ var TimeLeft = 60
 var PauseTime = false
 
 var score = 0
-var level = 0
+var level = 28
 var deaths = 0
 var is_ingame = false
 var is_gameover = false
@@ -16,7 +16,7 @@ var dir = "res://Nodes/Levels/"
 
 var levels = [
 	"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15",
-	"16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"
+	"16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29"
 ]
 
 func _ready():
