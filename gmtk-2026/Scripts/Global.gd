@@ -49,7 +49,7 @@ func reset_player():
 	deaths += 1
 	
 func end_game(won):
-	score = floor(max(0, score / (deaths + 1)))
+	score = floor(max(0, score - (deaths * 10)))
 	if won: TheScene.get_node("EndScreen").get_node("Message").text = "You win!"
 	else: TheScene.get_node("EndScreen").get_node("Message").text = "You lose!"
 	
@@ -58,13 +58,8 @@ func end_game(won):
 	is_gameover = true
 	
 func restart_game():
-	var next_level = load(dir + levels[level] + ".tscn")
-	
-	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
-	TheScene.get_node("Level").add_child(next_level.instantiate())
-	
 	level = 0
-	TimeLeft = 15
+	TimeLeft = 40
 	score = 0
 	deaths = 0
 	is_ingame = true
@@ -73,5 +68,9 @@ func restart_game():
 	ThePlayer.position = ThePlayer.start_pos
 	ThePlayer.velocity = Vector2()
 	
+	var next_level = load(dir + levels[level] + ".tscn")
+	
+	if TheScene.get_node("Level").get_child(0): TheScene.get_node("Level").get_child(0).free()
+	TheScene.get_node("Level").add_child(next_level.instantiate())
 	
 	
