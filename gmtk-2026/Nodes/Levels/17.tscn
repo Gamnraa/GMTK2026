@@ -116,7 +116,7 @@ rotates = false
 
 [node name="MovingPlatform" parent="Path2D/PathFollow2D" unique_id=1320957195 node_paths=PackedStringArray("path") instance=ExtResource("2_r5pr4")]
 rotation = -1.5707964
-speed = 0.6
+speed = 2.0
 path = NodePath("..")
 
 [node name="Blade" parent="." unique_id=1021255079 instance=ExtResource("2_ceqvy")]

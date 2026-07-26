@@ -119,7 +119,7 @@ rotation = 3.1415927
 
 [node name="MovingPlatform" parent="Path2D/PathFollow2D" unique_id=1320957195 node_paths=PackedStringArray("path") instance=ExtResource("2_wwymy")]
 rotation = 1.5707964
-speed = 4.5
+speed = 14.0
 path = NodePath("..")
 
 [node name="Path2D2" type="Path2D" parent="." unique_id=1908456212]
@@ -132,7 +132,7 @@ progress = 660.0001
 
 [node name="MovingPlatform" parent="Path2D2/PathFollow2D" unique_id=1708594154 node_paths=PackedStringArray("path") instance=ExtResource("2_wwymy")]
 rotation = 1.5707964
-speed = 4.5
+speed = 14.0
 path = NodePath("..")
 
 [node name="Path2D3" type="Path2D" parent="." unique_id=2095735243]
@@ -145,7 +145,7 @@ progress = 1320.0002
 
 [node name="MovingPlatform" parent="Path2D3/PathFollow2D" unique_id=137896461 node_paths=PackedStringArray("path") instance=ExtResource("2_wwymy")]
 rotation = 1.5707964
-speed = 4.5
+speed = 14.0
 path = NodePath("..")
 
 [node name="Path2D4" type="Path2D" parent="." unique_id=259586965]
@@ -158,7 +158,7 @@ progress = 60.000008
 
 [node name="MovingPlatform" parent="Path2D4/PathFollow2D" unique_id=570931736 node_paths=PackedStringArray("path") instance=ExtResource("2_wwymy")]
 rotation = 1.5707964
-speed = 4.5
+speed = 14.0
 path = NodePath("..")
 
 [node name="Path2D5" type="Path2D" parent="." unique_id=1388101455]
@@ -171,7 +171,7 @@ progress = 720.0001
 
 [node name="MovingPlatform" parent="Path2D5/PathFollow2D" unique_id=1518330328 node_paths=PackedStringArray("path") instance=ExtResource("2_wwymy")]
 rotation = 1.5707964
-speed = 4.5
+speed = 14.0
 path = NodePath("..")
 
 [node name="Path2D6" type="Path2D" parent="." unique_id=1502404420]
@@ -184,5 +184,5 @@ progress = 1380.0001
 
 [node name="MovingPlatform" parent="Path2D6/PathFollow2D" unique_id=1421492252 node_paths=PackedStringArray("path") instance=ExtResource("2_wwymy")]
 rotation = 1.5707964
-speed = 4.5
+speed = 14.0
 path = NodePath("..")

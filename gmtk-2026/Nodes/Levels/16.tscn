@@ -128,7 +128,7 @@ rotation = -0.8042639
 progress = 17.82069
 
 [node name="Blade" parent="Path2D/PathFollow2D" unique_id=1021255079 node_paths=PackedStringArray("path") instance=ExtResource("2_4dmiq")]
-speed = 0.45
+speed = 2.0
 path = NodePath("..")
 
 [node name="Fire" parent="." unique_id=658194644 instance=ExtResource("3_ayvxo")]
@@ -143,7 +143,7 @@ rotation = 2.3561945
 progress = 314.83218
 
 [node name="Blade" parent="Path2D3/PathFollow2D" unique_id=222256902 node_paths=PackedStringArray("path") instance=ExtResource("2_4dmiq")]
-speed = 0.45
+speed = 2.0
 path = NodePath("..")
 
 [node name="Fire2" parent="." unique_id=1997054128 instance=ExtResource("3_ayvxo")]
@@ -216,7 +216,7 @@ rotation = -0.8042639
 progress = 17.82069
 
 [node name="Blade" parent="Path2D7/PathFollow2D" unique_id=179337135 node_paths=PackedStringArray("path") instance=ExtResource("2_4dmiq")]
-speed = 0.45
+speed = 2.0
 path = NodePath("..")
 
 [node name="Fire3" parent="." unique_id=1219225628 instance=ExtResource("3_ayvxo")]
@@ -232,7 +232,7 @@ rotation = 2.3561945
 progress = 314.83218
 
 [node name="Blade" parent="Path2D8/PathFollow2D" unique_id=1478055906 node_paths=PackedStringArray("path") instance=ExtResource("2_4dmiq")]
-speed = 0.45
+speed = 2.0
 path = NodePath("..")
 
 [node name="Fire4" parent="." unique_id=91523984 instance=ExtResource("3_ayvxo")]
