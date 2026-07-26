@@ -23,7 +23,7 @@ func _process(dt):
 
 func _on_win_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		if Global.level < Global.levels.size():
+		if Global.level < Global.levels.size() - 1:
 			Global.score += Global.TimeLeft * 15
 			Global.TimeLeft = Global.TimeLeft + 4 + (floor(Global.level / 5))
 			$Camera2D/Win.set_deferred("monitoring", false)
