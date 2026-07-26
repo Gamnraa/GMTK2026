@@ -25,7 +25,7 @@ func _on_win_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		if Global.level < Global.levels.size():
 			Global.score += Global.TimeLeft * 15
-			Global.TimeLeft = Global.TimeLeft + 4
+			Global.TimeLeft = Global.TimeLeft + 4 + (floor(Global.level + 1 / 5))
 			$Camera2D/Win.set_deferred("monitoring", false)
 			var tween = get_tree().create_tween()
 			$Player.process_mode = Node.PROCESS_MODE_DISABLED
