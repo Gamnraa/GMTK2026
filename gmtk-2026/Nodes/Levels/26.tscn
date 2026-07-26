@@ -44,7 +44,7 @@ rotates = false
 
 [node name="MovingPlatform2" parent="Path2D/PathFollow2D" unique_id=1320957195 node_paths=PackedStringArray("path") instance=ExtResource("2_bovux")]
 rotation = -1.5707964
-speed = 3.0
+speed = 2.0
 path = NodePath("..")
 
 [node name="Path2D2" type="Path2D" parent="." unique_id=1598683343]
@@ -57,7 +57,7 @@ rotates = false
 
 [node name="MovingPlatform2" parent="Path2D2/PathFollow2D" unique_id=591019347 node_paths=PackedStringArray("path") instance=ExtResource("2_bovux")]
 rotation = -1.5707964
-speed = 3.0
+speed = 2.0
 path = NodePath("..")
 
 [node name="Path2D3" type="Path2D" parent="." unique_id=1880734763]
@@ -70,7 +70,7 @@ rotates = false
 
 [node name="MovingPlatform2" parent="Path2D3/PathFollow2D" unique_id=675821321 node_paths=PackedStringArray("path") instance=ExtResource("2_bovux")]
 rotation = -1.5707964
-speed = 3.0
+speed = 2.0
 path = NodePath("..")
 
 [node name="Path2D4" type="Path2D" parent="." unique_id=243433878]
@@ -83,5 +83,5 @@ rotates = false
 
 [node name="MovingPlatform2" parent="Path2D4/PathFollow2D" unique_id=1364659341 node_paths=PackedStringArray("path") instance=ExtResource("2_bovux")]
 rotation = -1.5707964
-speed = 3.0
+speed = 2.0
 path = NodePath("..")
