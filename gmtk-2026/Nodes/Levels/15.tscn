@@ -120,7 +120,7 @@ rotation = 3.1415927
 
 [node name="MovingPlatform" parent="Path2D/PathFollow2D" unique_id=1320957195 node_paths=PackedStringArray("path") instance=ExtResource("2_s8h5s")]
 rotation = 1.5707964
-speed = 2.7
+speed = 9.0
 path = NodePath("..")
 
 [node name="Path2D2" type="Path2D" parent="." unique_id=297185632]
@@ -133,7 +133,7 @@ progress = 1000.0001
 
 [node name="MovingPlatform" parent="Path2D2/PathFollow2D" unique_id=1428176498 node_paths=PackedStringArray("path") instance=ExtResource("2_s8h5s")]
 rotation = 1.5707964
-speed = 2.7
+speed = 9.0
 path = NodePath("..")
 
 [node name="Path2D4" type="Path2D" parent="." unique_id=259586965]
