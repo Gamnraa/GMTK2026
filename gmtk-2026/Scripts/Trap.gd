@@ -23,7 +23,7 @@ func _on_cooldown_timeout() -> void:
 	$AnimatedSprite2D.scale = Vector2(0.8, 0.8)
 	var tween = get_tree().create_tween()
 	tween.tween_property($AnimatedSprite2D, "position", Vector2(0, -40), .15)
-	await get_tree().create_timer(.16).timeout
+	await get_tree().create_timer(.17).timeout
 	$AnimatedSprite2D.hide()
 	$AnimatedSprite2D.position = Vector2(0, 0)
 	await get_tree().create_timer(.5).timeout

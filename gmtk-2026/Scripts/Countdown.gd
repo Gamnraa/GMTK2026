@@ -40,11 +40,11 @@ func increment():
 	var offset = 0
 	var tween = get_tree().create_tween()
 	if second_place == "9":
-		offset = .10
-		tween.tween_property($Count/First, "offset_transform_position", Vector2(0, -18.475), .10)
-	tween.tween_property($Count/Second, "offset_transform_position", Vector2(0, -18.475), .15)
+		offset = .09
+		tween.tween_property($Count/First, "offset_transform_position", Vector2(0, -18.475), .07)
+	tween.tween_property($Count/Second, "offset_transform_position", Vector2(0, -18.475), .12)
 	
-	await get_tree().create_timer(.16 + offset).timeout
+	await get_tree().create_timer(.14 + offset).timeout
 	tweening = false
 	update_vals()
 	
@@ -52,11 +52,11 @@ func decrement():
 	var offset = 0
 	var tween = get_tree().create_tween()
 	if second_place == "0":
-		offset = .10
-		tween.tween_property($Count/First, "offset_transform_position", Vector2(0, 15.250), .10)
-	tween.tween_property($Count/Second, "offset_transform_position", Vector2(0, 15.250), .15)
+		offset = .09
+		tween.tween_property($Count/First, "offset_transform_position", Vector2(0, 15.250), .07)
+	tween.tween_property($Count/Second, "offset_transform_position", Vector2(0, 15.250), .12)
 	
-	await get_tree().create_timer(.16 + offset).timeout
+	await get_tree().create_timer(.14 + offset).timeout
 	tweening = false
 	update_vals()
 
