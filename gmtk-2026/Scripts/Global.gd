@@ -59,7 +59,7 @@ func end_game(won):
 	
 func restart_game():
 	level = 0
-	TimeLeft = 40
+	TimeLeft = 60
 	score = 0
 	deaths = 0
 	is_ingame = true
